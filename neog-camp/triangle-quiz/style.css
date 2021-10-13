@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root {
+    --purple: rgb(74, 95, 202);
+    --light-purple: rgba(209, 215, 255, 0.847);
+    --text: rgb(37, 37, 37);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-purple);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2.5rem;
+}
+
+header .header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .github a, footer a {
+    color: initial;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    background-color: var(--purple);
+    margin: 0 2rem 2rem;
+}
+
+.check-triangle, .get-hypotenuse, .guess-angle, .calc-area, .quiz {
+    flex: 50%;
+    padding: 1rem;
+    border: 0.5rem solid var(--light-purple);
+}
+
+.quiz-wrapper {
+    background-color: var(--light-purple);
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 0.15rem;
+}
+
+.quiz-score {
+    margin: 1rem 0;
+}
+
+input[type="number"], button {
+    width: 8rem;
+    font-size: 0.85rem;
+    padding: 0.45rem;
+    margin: 0.5rem 0;
+    outline: none;
+    border: none;
+    border-radius: 0.15rem;
+}
+
+input[type="radio"] {
+    margin: 1rem 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--light-purple);
+    color: var(--text);
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 0 0.5rem 1rem;
+    }
+}
